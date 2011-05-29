@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="upfrontaccounting">
+
+<head><title></title></head>
+
+<body>
+
+<metal:body_macro metal:define-macro="body"
+    tal:define="base_macros here/base/macros;
+        field_macro here/widgets/field/macros/view;">
+
+    <ul tal:repeat="ledger python:here.getFolderContents()">
+        <li><a href="#" tal:attributes="href ledger/getURL" tal:content="ledger/Title">General Ledger</a></li>
+    </ul>
+
+</metal:body_macro>
+
+<metal:body_macro metal:define-macro="folderlisting"/>
+
+</body>
+
+</html>

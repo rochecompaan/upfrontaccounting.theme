@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="upfrontaccounting">
+
+<head><title></title></head>
+
+<body>
+
+<metal:body_macro metal:define-macro="body"
+    tal:define="base_macros here/base/macros;
+        field_macro here/widgets/field/macros/view;">
+
+    <p i18n:translate="help_accountingfolder_view">
+        This page lists all ledgers and cashbooks and their
+        contents.
+    </p>
+
+    <tal:ledger tal:repeat="ledger python:here.getFolderContents(
+                        contentFilter={'object_provides': 'Products.UpfrontAccounting.content.interfaces.ILedger'})">
+        <h3 tal:content="ledger/Title">Ledger</h3>
+        <ul tal:define="ledgerObj ledger/getObject" tal:repeat="folder ledgerObj/getFolderContents">
+            <li><a href="#" tal:attributes="href folder/getURL" tal:content="folder/Title">Accounts</a></li>
+        </ul>
+    </tal:ledger>
+
+    <h3 i18n:translate="heading_bankaccounts_cashbooks">Cashbooks</h3>
+
+    <ul tal:repeat="brain python:here.getFolderContents(
+                        contentFilter={'portal_type': 'CashBook'})">
+        <li><a href="#" tal:define="cashbook brain/getObject;
+                                    bankaccount cashbook/getBankAccount"
+                        tal:attributes="href brain/getURL" tal:content="python:'%s: %s' % (brain.Title, bankaccount and bankaccount.Title() or '')">Cashbook: Cheque Account</a></li>
+    </ul>
+
+    <form action="createObject" method="get">
+        <input type="hidden" name="type_name" value="CashBook"/>
+        <input id="add_cashbook" type="submit" value="Add Cashbook"/>
+    </form>
+
+    <h3 i18n:translate="setup">Setup</h3>
+        <ul>
+            <li><a href="#" tal:attributes="href string:${context/absolute_url}/edit" i18n:translate="">Preferences</a></li>
+            <li tal:repeat="obj here/getFolderContents">
+                <a href="#" tal:attributes="href string:${obj/getURL}/edit" tal:content="obj/Title">Accounts</a>
+            </li>
+        </ul>
+
+
+</metal:body_macro>
+
+<metal:body_macro metal:define-macro="folderlisting"/>
+
+</body>
+
+</html>

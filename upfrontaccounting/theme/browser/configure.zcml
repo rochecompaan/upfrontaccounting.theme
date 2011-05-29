@@ -1,0 +1,78 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="upfrontaccounting.theme">
+
+    <!-- 'UpfrontAccounting Theme' Zope 3 browser layer -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="UpfrontAccounting Theme"
+        />
+  
+    <!-- Viewlets registration -->
+    <browser:viewletManager
+        name="upfrontaccounting.pathbar"
+        provides=".interfaces.IPathBar"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        />
+
+    <browser:viewlet
+        name="upfrontaccounting.searchbox"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.SearchBoxViewlet"
+        permission="zope2.View" 
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <browser:viewlet
+        name="upfrontaccounting.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.GlobalSectionsViewlet"
+        permission="zope2.View" 
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <browser:viewlet
+        name="upfrontaccounting.site_actions"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.SiteActionsViewlet"
+        permission="zope2.View" 
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <browser:viewlet
+        name="upfrontaccounting.folder_factories"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+        class=".viewlets.FolderFactoriesMenu"
+        permission="zope2.View" 
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- The breadcrumbs -->
+    <browser:viewlet
+        name="upfrontaccounting.pathbar.viewlet"
+        manager=".interfaces.IPathBar"
+        class="plone.app.layout.viewlets.common.PathBarViewlet"
+        permission="zope2.View" 
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Zope 3 browser resources -->
+
+    <!-- Resource directory for images -->
+    <browser:resourceDirectory
+        name="upfrontaccounting.theme.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Resource directory for stylesheets -->
+    <browser:resourceDirectory
+        name="upfrontaccounting.theme.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+</configure>

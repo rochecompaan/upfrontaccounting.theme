@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<object>
+    <order manager="plone.portalheader" skinname="UpfrontAccounting Theme">
+        <viewlet name="plone.skip_links" />
+        <viewlet name="upfrontaccounting.site_actions" />
+        <viewlet name="plone.logo" />
+        <viewlet name="upfrontaccounting.global_sections" />
+        <viewlet name="upfrontaccounting.searchbox" />
+    </order>
+    
+    <hidden manager="plone.portalheader" skinname="UpfrontAccounting Theme">
+        <viewlet name="plone.global_sections" />
+        <viewlet name="plone.site_actions" />
+        <viewlet name="plone.searchbox" />
+    </hidden>
+
+    <hidden manager="plone.portaltop" skinname="UpfrontAccounting Theme">
+        <viewlet name="plone.personal_bar" />
+        <viewlet name="plone.path_bar" />
+    </hidden>
+
+    <hidden manager="plone.contentviews" skinname="UpfrontAccounting Theme">
+        <viewlet name="plone.contentactions" />
+    </hidden>
+
+</object>

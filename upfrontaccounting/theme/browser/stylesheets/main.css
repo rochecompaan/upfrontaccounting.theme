@@ -1,0 +1,407 @@
+/* Stylesheet for the 'UpfrontAccounting Theme' Plone theme */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: auto;
+    font-size: 75%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 160%;
+    color: #ff6600;
+    border-bottom: 1px solid #ff6600;
+}
+
+h2 {
+    color: #ff6600;
+    border-bottom: 1px solid #ff6600;
+}
+
+h3, h4, h5, h6 {
+    color: #666;
+    font-weight: normal;
+    border-bottom: 1px solid #666;
+}
+
+a {
+    text-decoration: none;
+    color: #0033cc; 
+}
+
+img {
+    border: none;
+}
+
+table {
+    font-size: 115%;
+}
+
+pre {
+    background-color: #dbe9f4;
+    border: 1px solid #0d69a8;
+    color: Black;
+    font-family: Monaco,"Courier New",Courier,monospace;
+    font-size: 100%;
+    overflow: auto;
+    padding: 1em;
+    margin-left: 0.5em;
+}
+
+dd {
+    padding-bottom: 1em;
+    margin-left: 1.5em;
+}
+
+#portal-top {
+    background: #0f75bc;
+}
+
+#portal-header {
+    max-width: 1024px;
+    margin: auto;
+    text-align: left;
+}
+
+.documentFirstHeading img {
+    display: none;
+}
+
+.documentContent li a:visited,
+.documentContent p a:visited {
+    background-color: transparent;
+    color: Purple;
+}
+
+.documentContent li a,
+.documentContent p a {
+    border-bottom: 1px solid #CCCCCC;
+    text-decoration: none;
+}
+
+
+#portal-column-right {
+    margin-left: 0.5em;
+    border-left: 1px solid #b5b5b5;
+}
+
+.portlet {
+    padding: 0 1em;
+    width: 200px;
+}
+
+.portletHeader,
+.portletHeader a {
+    font-weight: bold;
+    font-size: 128%;
+    color: #ff6600;
+    padding-bottom: 1em;
+}
+
+.portletItemDetails {
+    color: Black;
+    display: block;
+}
+
+.searchResults img,
+.contenttype-blogentry img,
+.summary img,
+.portletItem img {
+    display: none;
+}
+
+#portal-column-right dd {
+    margin-left: 0em;
+}
+
+#heading-services,
+#blog-heading {
+    white-space: nowrap;
+    margin-top: 0px
+}
+
+#blog-rss {
+    float: right;
+}
+
+#portal-footer {
+    background-image: url('footerback.png');
+}
+
+#footer-content {
+    max-width: 1024px;
+    margin: auto;
+    padding: 0;
+    text-align: right;
+}
+
+#footer-logo {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#portal-copyright {
+    margin-right: 160px;
+    margin-top: 28px;
+    color: #99ccff;
+    font-size: 9pt;
+    float: right;
+    text-align: left;
+}
+
+.hiddenStructure {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+    display: block;
+    height: 1px;
+    margin: -1px 0 0 -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+}
+
+.documentActions {
+    border-top: 1px solid #8CACBB;
+    margin: 2em 0;
+    padding: 0;
+    text-align: right;
+}
+
+.documentActions ul {
+    display: block;
+    list-style-image: none;
+    list-style-type: none;
+    margin: -0.9em 0 0;
+    padding: 0 0.5em;
+}
+
+.documentActions li {
+    background-color: White;
+    display: inline;
+    font-size: 90%;
+    margin: 0 0.5em;
+    padding: 0 0.25em;
+}
+
+#content .documentActions li a:visited {
+    color: #0033CC;
+}
+#content .documentActions li a {
+    border: none;
+}
+
+.documentDescription {
+    display: block;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.documentByLine {
+    color: #76797C;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+.documentByLine img.avatar {
+    display: none;
+}
+
+.comment .documentByLine {
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+div.comment {
+    margin-bottom: 1em;
+    margin-left: 0em !important;
+}
+
+#reply {
+    display: none !important;
+}
+
+#portal-column-content ul.simpleBlogBylineCats {
+    display:inline;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+}
+
+dt {
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.simpleBlogBylineCats li {
+    display:inline;
+    margin-right:0.4em;
+}
+
+.simpleBlogBylineCats li a {
+    border-bottom: 1px solid #CCCCCC;
+    text-decoration: none;
+}
+
+
+.SimpleBlogPortlet dt.blogCalendar {
+    font-size: 100%;
+    text-align: center;
+}
+
+.portletHeader, .managedPortlet .portletHeader {
+    font-weight: normal;
+    line-height: 1.6em;
+    text-transform: none;
+}
+
+.ploneCalendar {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 90%;
+}
+
+.ploneCalendar .weekdays th {
+    border-style: solid none;
+    border-width: 1px;
+    font-weight: normal;
+    padding: 2px;
+    text-align: center;
+}
+
+.ploneCalendar td {
+    background-color: transparent;
+    padding: 2px;
+    text-align: center;
+    width: 14%;
+}
+
+#portal-sitemap {
+    border:medium none;
+    font-size:90%;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0;
+}
+
+#portal-sitemap a,
+#portal-sitemap li a:visited {
+    border: 1px solid White;
+}
+
+#portal-sitemap .navTreeLevel2 {
+    border-left: 0.5em solid #DEE7EC;
+    margin: 0 0 0 0.6em;
+    padding-left: 1em;
+}
+
+.navTree li {
+    margin-bottom: 1px;
+}
+.navTreeItem {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+dl.portalMessage {
+    background-color: #FFFFE3;
+    border: 1px solid #999966;
+    font-size: 90%;
+}
+
+dl.portalMessage dt {
+    background-color: #999966;
+    color: White;
+    float: left;
+    font-weight: bold;
+    line-height: 1.25em;
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.75em;
+}
+
+dl.portalMessage dd {
+    line-height: 1.25em;
+    padding: 0.5em;
+}
+
+.contentViews {
+    float: right;
+    margin-top: 0.6em;
+    margin-right: 0.5em;
+    border: none;
+}
+.contentViews li a,
+.contentViews li a:hover,
+.contentViews .selected a {
+    background-color: white;
+    border: none;
+    color: #0033CC;
+    padding: 0 0.5em;
+}
+
+.contentViews .selected a:hover,
+.contentViews .selected a {
+    border-bottom: 3px solid #FF6600;
+}
+
+.contentActions {
+    padding: 0 1em 0 0;
+}
+#contentActionMenus a {
+    color: #0033CC;
+    padding: 0;
+}
+#contentActionMenus a:visited {
+    color: #0033CC;
+}
+#contentActionMenus .actionMenuContent li a:hover {
+    color: White;
+}
+
+div.contentActions {
+    border-bottom: 1px dashed black;
+    margin-bottom: 1em;
+}
+
+.contentActions,
+.contentActions li,
+.contentActions li a {
+    border: none;
+    background: transparent;
+}
+
+.contentActions li {
+    float: left;
+}
+.actionMenu .actionMenuContent {
+    left: -1px;
+}
+.actionMenu .actionMenuContent ul {
+    background: #fff;
+    border: 1px dashed black;
+}
+.actionMenu .actionMenuContent li a:hover {
+    background: #3399cc;
+}
+
+.objectActions {
+    float: right;
+    margin-top: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.inline-view {
+    border: 1px dotted black;
+    z-index: 1;
+}
+
+#add_cashbook {
+    margin-top: 0.5em;
+    margin-left: 1.5em;
+    font-size: 90%;
+}

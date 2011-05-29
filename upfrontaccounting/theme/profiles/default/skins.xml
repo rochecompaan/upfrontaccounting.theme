@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="UpfrontAccounting Theme">
+
+ <object name="upfrontaccounting_theme_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="upfrontaccounting.theme:skins/upfrontaccounting_theme_custom_images"/>
+ <object name="upfrontaccounting_theme_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="upfrontaccounting.theme:skins/upfrontaccounting_theme_custom_templates"/>
+ <object name="upfrontaccounting_theme_styles"
+    meta_type="Filesystem Directory View"
+    directory="upfrontaccounting.theme:skins/upfrontaccounting_theme_styles"/>
+
+ <skin-path name="UpfrontAccounting Theme" based-on="Plone Default">
+  <layer name="upfrontaccounting_theme_custom_images"
+     insert-after="custom"/>
+  <layer name="upfrontaccounting_theme_custom_templates"
+     insert-after="upfrontaccounting_theme_custom_images"/>
+  <layer name="upfrontaccounting_theme_styles"
+     insert-after="upfrontaccounting_theme_custom_templates"/>
+ </skin-path>
+
+</object>

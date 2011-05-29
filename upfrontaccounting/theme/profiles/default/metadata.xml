@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<metadata>
+    <version>1</version>
+    <description>UpfrontAccounting Theme</description>
+    <dependencies>
+        <dependency>profile-Products.UpfrontAccounting:default</dependency>
+    </dependencies>
+</metadata>
